@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -78,8 +78,8 @@
     <span>🎓 <b>College Project Demo Mode:</b> <span id="demoUserText">Not logged in</span></span>
     <div>
       <span>Quick Switch:</span>
-      <button onclick="Auth.quickDemoLogin('traveler')">Traveler (John)</button>
-      <button onclick="Auth.quickDemoLogin('agent')">Travel Agent (Skyline)</button>
+      <button onclick="Auth.quickDemoLogin('traveler')">Traveler</button>
+      <button onclick="Auth.quickDemoLogin('agent')">Travel Agent</button>
       <button onclick="Auth.quickDemoLogin('admin')">Admin</button>
     </div>
   </div>
@@ -474,7 +474,7 @@
       let user = Auth.getUser();
       if (!user) {
         // Auto-login as traveler for presentation convenience if not logged in
-        await Auth.quickDemoLogin('traveler');
+        if (!localStorage.getItem('voyage_token')) { await Auth.quickDemoLogin('traveler'); }
         user = Auth.getUser();
         if (!user) {
           alert('Please login to complete booking.');
@@ -584,3 +584,6 @@ Service Tax (GST) : INCLUDED (0% Waived)
   </script>
 </body>
 </html>
+
+
+

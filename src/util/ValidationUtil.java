@@ -35,8 +35,17 @@ public class ValidationUtil {
 
     public static boolean isValidEmail(String email) {
         if (!isNotEmpty(email)) return false;
-        return EMAIL_PATTERN.matcher(email.trim()).matches();
+        String e = email.trim().toLowerCase();
+        if (!EMAIL_PATTERN.matcher(e).matches()) return false;
+        return DEMO_EMAILS.contains(e) || ALLOWED_EMAIL_DOMAINS.contains(e.substring(e.indexOf('@') + 1));
     }
+
+    private static final java.util.Set<String> ALLOWED_EMAIL_DOMAINS = new java.util.HashSet<>(java.util.Arrays.asList(
+            "gmail.com", "yahoo.com", "yahoo.in", "yahoo.co.in", "outlook.com", "hotmail.com",
+            "live.com", "icloud.com", "rediffmail.com", "proton.me", "protonmail.com"));
+
+    private static final java.util.Set<String> DEMO_EMAILS = new java.util.HashSet<>(java.util.Arrays.asList(
+            "admin@example.com", "agent@example.com", "traveler@example.com"));
 
     public static final String PLACEHOLDER_EMAIL_DOMAIN = "@noemail.tripzy.com";
 

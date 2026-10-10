@@ -1,19 +1,13 @@
-# Compiled class files
-bin/
+out/
 *.class
-
-# Log files
 *.log
-
-# IDE & Editor files
 .idea/
-*.iml
 .vscode/
-.settings/
-.project
-.classpath
+*.iml
 
-# OS generated files
-Thumbs.db
-Desktop.ini
-.DS_Store
+# Review 1 scope ke bahar
+web/
+src/view/
+src/Main.java
+src/*Test*.java
+src/TestSystem.java

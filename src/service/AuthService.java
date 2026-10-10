@@ -87,6 +87,9 @@ public class AuthService {
         try {
             User user = null;
             String trimmed = emailOrPhone.trim();
+            if (trimmed.contains("@") && !ValidationUtil.isValidEmail(trimmed)) {
+                throw new AuthenticationException("Please log in with a valid email (Gmail, Yahoo, Outlook, Hotmail, iCloud) or your mobile number.");
+            }
             if (trimmed.contains("@")) {
                 user = userDAO.findByEmail(trimmed);
                 if (user == null) {

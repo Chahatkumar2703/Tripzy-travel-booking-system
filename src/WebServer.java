@@ -185,7 +185,7 @@ public class WebServer {
             }
             String path = exchange.getRequestURI().getPath();
             if ("/".equals(path) || path.isEmpty()) {
-                path = "/index.html";
+                path = "/login.html";
             }
 
             File file = resolveFile(path);
@@ -197,7 +197,7 @@ public class WebServer {
             }
 
             if (file == null || !file.exists() || file.isDirectory()) {
-                file = resolveFile("/index.html");
+                file = resolveFile("/login.html");
             }
 
             if (file != null && file.exists() && !file.isDirectory()) {

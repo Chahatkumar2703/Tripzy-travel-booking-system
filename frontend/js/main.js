@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Main Frontend Utilities & Layout Ingestion
  */
 
@@ -410,8 +410,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <span>🎓 <b>College Project Demo Mode:</b> <span id="demoUserText">Not logged in</span></span>
         <div>
           <span>Quick Switch:</span>
-          <button onclick="Auth.quickDemoLogin('traveler')">Traveler (John)</button>
-          <button onclick="Auth.quickDemoLogin('agent')">Travel Agent (Skyline)</button>
+          <button onclick="Auth.quickDemoLogin('traveler')">Traveler</button>
+          <button onclick="Auth.quickDemoLogin('agent')">Travel Agent</button>
           <button onclick="Auth.quickDemoLogin('admin')">Admin</button>
         </div>
       </div>
@@ -499,3 +499,4 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 });
+

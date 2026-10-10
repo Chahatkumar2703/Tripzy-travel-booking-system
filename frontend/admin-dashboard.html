@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -72,11 +72,11 @@
       transition: all 0.2s;
     }
     .admin-tab-btn:hover {
-      color: #0284c7;
+      color: #0d9488;
     }
     .admin-tab-btn.active {
-      color: #0284c7;
-      border-bottom-color: #0284c7;
+      color: #0d9488;
+      border-bottom-color: #0d9488;
     }
   </style>
 </head>
@@ -110,7 +110,7 @@
     <div class="kpi-matrix">
       <!-- 1. Total Users -->
       <div class="admin-kpi-card">
-        <div class="kpi-icon-admin" style="background: #e0f2fe; color: #0284c7;">
+        <div class="kpi-icon-admin" style="background: #ccfbf1; color: #0d9488;">
           <i class="fa-solid fa-users"></i>
         </div>
         <div>
@@ -154,7 +154,7 @@
 
       <!-- 5. Flights -->
       <div class="admin-kpi-card">
-        <div class="kpi-icon-admin" style="background: #e0f2fe; color: #0369a1;">
+        <div class="kpi-icon-admin" style="background: #ccfbf1; color: #0f766e;">
           <i class="fa-solid fa-plane"></i>
         </div>
         <div>
@@ -498,8 +498,8 @@
       
       rawUsers.forEach(u => {
         const isActive = (u.status || 'ACTIVE').toUpperCase() === 'ACTIVE';
-        const roleColor = u.role === 'ADMIN' ? '#0f172a' : (u.role === 'AGENT' ? '#059669' : '#0284c7');
-        const roleBg = u.role === 'ADMIN' ? '#e2e8f0' : (u.role === 'AGENT' ? '#d1fae5' : '#e0f2fe');
+        const roleColor = u.role === 'ADMIN' ? '#0f172a' : (u.role === 'AGENT' ? '#059669' : '#0d9488');
+        const roleBg = u.role === 'ADMIN' ? '#e2e8f0' : (u.role === 'AGENT' ? '#d1fae5' : '#ccfbf1');
 
         html += `
           <tr>
@@ -558,7 +558,7 @@
 
         html += `
           <tr>
-            <td style="font-family: monospace; font-weight: 600; color: #0284c7;">#${escapeHtml(b.bookingCode)}</td>
+            <td style="font-family: monospace; font-weight: 600; color: #0d9488;">#${escapeHtml(b.bookingCode)}</td>
             <td>
               <div style="font-weight: 600; color: #0f172a;">${escapeHtml(b.userName)}</div>
               <div style="font-size: 0.78rem; color: #64748b;">${escapeHtml(b.userEmail)}</div>
@@ -613,7 +613,7 @@
       rawPayments.forEach(p => {
         html += `
           <tr>
-            <td style="font-family: monospace; font-weight: 600; color: #0284c7;">${escapeHtml(p.transactionCode)}</td>
+            <td style="font-family: monospace; font-weight: 600; color: #0d9488;">${escapeHtml(p.transactionCode)}</td>
             <td style="font-family: monospace; font-weight: 600;">#${escapeHtml(p.bookingCode)}</td>
             <td style="font-weight: 600;">${escapeHtml(p.userName || 'Customer')}</td>
             <td style="font-weight: 700; color: #16a34a;">${formatCurrency(p.amount)}</td>
@@ -669,3 +669,4 @@
   </script>
 </body>
 </html>
+

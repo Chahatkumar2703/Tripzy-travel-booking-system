@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .itinerary-hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0284c7 100%);
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%);
       color: white;
       padding: 48px 24px;
       border-radius: 16px;
@@ -43,7 +43,7 @@
     .stat-pill .stat-val {
       font-size: 1.5rem;
       font-weight: 800;
-      color: #38bdf8;
+      color: #2dd4bf;
     }
     .stat-pill .stat-lbl {
       font-size: 0.78rem;
@@ -83,16 +83,16 @@
       height: 44px;
       border-radius: 50%;
       background: white;
-      border: 3px solid #0284c7;
+      border: 3px solid #0d9488;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.15rem;
-      color: #0284c7;
+      color: #0d9488;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       z-index: 2;
     }
-    .timeline-node.type-FLIGHT .timeline-node-icon { border-color: #0284c7; color: #0284c7; background: #e0f2fe; }
+    .timeline-node.type-FLIGHT .timeline-node-icon { border-color: #0d9488; color: #0d9488; background: #ccfbf1; }
     .timeline-node.type-HOTEL .timeline-node-icon { border-color: #ea580c; color: #ea580c; background: #ffedd5; }
     .timeline-node.type-CAR .timeline-node-icon { border-color: #16a34a; color: #16a34a; background: #dcfce7; }
     .timeline-node.type-PACKAGE .timeline-node-icon { border-color: #9333ea; color: #9333ea; background: #f3e8ff; }
@@ -236,7 +236,7 @@
         if (segments.length === 0) {
           container.innerHTML = `
             <div style="text-align: center; padding: 80px 20px; background: white; border-radius: 16px; border: 1px dashed #cbd5e1;">
-              <div style="width: 80px; height: 80px; border-radius: 50%; background: #eff6ff; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.2rem; color: #0284c7;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; background: #eff6ff; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.2rem; color: #0d9488;">
                 <i class="fa-solid fa-map"></i>
               </div>
               <h2 style="margin: 0 0 10px 0; color: #0f172a;">Your itinerary is empty</h2>
@@ -311,7 +311,7 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; background: #f8fafc; padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; color: #475569; margin-bottom: 14px;">
                   <div>
                     <strong style="color: #1e293b;">Booking Code:</strong>
-                    <div style="font-family: monospace; font-weight: 600; color: #0284c7;">#${escapeHtml(seg.bookingCode)}</div>
+                    <div style="font-family: monospace; font-weight: 600; color: #0d9488;">#${escapeHtml(seg.bookingCode)}</div>
                   </div>
                   <div>
                     <strong style="color: #1e293b;">Party / Units:</strong>
@@ -353,3 +353,4 @@
   </script>
 </body>
 </html>
+

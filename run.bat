@@ -1,8 +1,4 @@
 @echo off
-echo ===================================================
-echo Starting Online Travel Booking System Application...
-echo ===================================================
-
-java -cp "bin;lib\mysql-connector-j-8.3.0.jar" Main
-
+cd /d C:\Projects\travel-booking-system
+java -cp "out;lib\*" WebServer
 pause

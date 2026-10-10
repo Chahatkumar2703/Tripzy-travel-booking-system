@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -34,9 +34,9 @@
       transition: all 0.2s;
     }
     .filter-pill:hover, .filter-pill.active {
-      background: var(--primary, #0284c7);
+      background: var(--primary, #0d9488);
       color: #fff;
-      border-color: var(--primary, #0284c7);
+      border-color: var(--primary, #0d9488);
     }
     .filter-pill .badge-count {
       background: rgba(0,0,0,0.1);
@@ -72,7 +72,7 @@
       justify-content: center;
       font-size: 1.5rem;
     }
-    .type-FLIGHT { background: #e0f2fe; color: #0284c7; }
+    .type-FLIGHT { background: #ccfbf1; color: #0d9488; }
     .type-HOTEL { background: #ffedd5; color: #ea580c; }
     .type-CAR { background: #dcfce7; color: #16a34a; }
     .type-PACKAGE { background: #f3e8ff; color: #9333ea; }
@@ -335,7 +335,7 @@
         const isCancelled = (b.bookingStatus || '').toUpperCase() === 'CANCELLED';
         const isConfirmed = (b.bookingStatus || '').toUpperCase() === 'CONFIRMED';
         
-        let statusBadge = `<span class="badge" style="background:#e0f2fe; color:#0369a1;"><i class="fa-solid fa-clock"></i> ${b.bookingStatus || 'PENDING'}</span>`;
+        let statusBadge = `<span class="badge" style="background:#ccfbf1; color:#0f766e;"><i class="fa-solid fa-clock"></i> ${b.bookingStatus || 'PENDING'}</span>`;
         if (isConfirmed) {
           statusBadge = `<span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> CONFIRMED</span>`;
         } else if (isCancelled) {
@@ -408,7 +408,7 @@
             <span style="font-size: 0.9rem; color: #64748b;"><i class="fa-solid fa-tag"></i> Category: ${type}</span>
           </div>
           <div style="text-align: right;">
-            <div style="font-family: monospace; font-size: 1.1rem; font-weight: 700; color: #0284c7;">${escapeHtml(b.bookingCode)}</div>
+            <div style="font-family: monospace; font-size: 1.1rem; font-weight: 700; color: #0d9488;">${escapeHtml(b.bookingCode)}</div>
             <span style="font-size: 0.8rem; color: #64748b;">Booking Reference</span>
           </div>
         </div>
@@ -450,7 +450,7 @@
             <span style="font-size: 0.85rem; color: #1e40af; font-weight: 600;">TOTAL FARE PAID</span>
             <div style="font-size: 0.75rem; color: #64748b;">Includes all taxes, service fees & regulatory surcharges</div>
           </div>
-          <div style="font-size: 1.6rem; font-weight: 800; color: #0284c7;">
+          <div style="font-size: 1.6rem; font-weight: 800; color: #0d9488;">
             ${formatCurrency(b.totalAmount)}
           </div>
         </div>
@@ -492,3 +492,4 @@
   </script>
 </body>
 </html>
+
